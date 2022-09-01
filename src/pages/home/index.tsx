@@ -1,10 +1,13 @@
-import MyCalendar from "../../conponents/core/calendar";
-        import MyButton from "../../conponents/core/button";
+import MyCalendar from "../../conponents/calendar";
+import UserState from "../../conponents/userState";
 
 const HomePage = () => {
   return (
-    <div><MyButton /><MyCalendar/></div>
-  )
+    <div>
+      <UserState />
+      <MyCalendar />
+    </div>
+  );
 }
 
 export default HomePage

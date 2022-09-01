@@ -1,7 +1,8 @@
 import type { BadgeProps } from "antd";
-import { Badge, Calendar } from "antd";
+import { Badge } from "antd";
 import type { Moment } from "moment";
 import React from "react";
+import { StyledCalendar } from "./style";
 
 const getListData = (value: Moment) => {
   let listData;
@@ -40,7 +41,7 @@ const getMonthData = (value: Moment) => {
   }
 };
 
-const MyCalendar: React.FC = () => {
+const MyCalendar = () => {
   const monthCellRender = (value: Moment) => {
     const num = getMonthData(value);
     return num ? (
@@ -57,7 +58,7 @@ const MyCalendar: React.FC = () => {
       <ul className="events">
         {listData.map((item) => (
           <li key={item.content}>
-            <Badge
+            <Badge 
               status={item.type as BadgeProps["status"]}
               text={item.content}
             />
@@ -68,7 +69,7 @@ const MyCalendar: React.FC = () => {
   };
 
   return (
-    <Calendar
+    <StyledCalendar
       dateCellRender={dateCellRender}
       monthCellRender={monthCellRender}
     />
