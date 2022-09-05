@@ -1,8 +1,10 @@
-import React from 'react'
+import UserState from "../userState"
 
 const UserCard = () => {
   return (
-    <div>UserCard</div>
+    <div>
+      logon logout card
+    </div>
   )
 }
 

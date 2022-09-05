@@ -1,10 +1,10 @@
 import MyCalendar from "../../conponents/calendar";
-import UserState from "../../conponents/userState";
+import UserCard from "../../conponents/userCard";
 
 const HomePage = () => {
   return (
     <div>
-      <UserState />
+      <UserCard/>
       <MyCalendar />
     </div>
   );
